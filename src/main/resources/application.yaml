@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: hello-word
+            uri: https://github.com
+            predicates:
+              - Path=/git
+            filters:
+              - SetPath=/
